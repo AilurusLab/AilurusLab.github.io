@@ -16,12 +16,17 @@ export function RedPanda({ className = "", animated = false }: { className?: str
   return (
     <svg viewBox="0 0 100 100" className={className} role="img" aria-label="Ailurus Lab red panda">
       {/* Ears: rust back, cream rim, dark inner */}
-      <path fill={RUST} d="M6 48C1 30 6 11 21 6c9-3 18 3 26 15L30 42Z" />
-      <path fill={RUST} d="M94 48c5-18 0-37-15-42-9-3-18 3-26 15l17 21Z" />
-      <path fill={CREAM} d="M9 46C5 30 9 14 22 9c7-2 15 3 22 13L30 40Z" />
-      <path fill={CREAM} d="M91 46c4-16 0-32-13-37-7-2-15 3-22 13l14 18Z" />
-      <path fill={EAR} d="M15 41c-2-11 1-22 9-25 5-2 10 2 14 8L26 37Z" />
-      <path fill={EAR} d="M85 41c2-11-1-22-9-25-5-2-10 2-14 8l12 13Z" />
+      {/* Each ear tilts outward around its base, which stays hidden behind the head */}
+      <g transform="translate(0 5) rotate(-14 32 44)">
+        <path fill={RUST} d="M13 52C8 33 10 13 23 7C32 3 41 9 49 21L32 40Z" />
+        <path fill={CREAM} d="M15 49C11 32 12 16 24 11C31 8 39 13 46 23L32 39Z" />
+        <path fill={EAR} d="M19 43C16 30 18 19 25 15C31 12 37 17 42 25L29 38Z" />
+      </g>
+      <g transform="translate(0 5) rotate(14 68 44)">
+        <path fill={RUST} d="M87 52C92 33 90 13 77 7C68 3 59 9 51 21L68 40Z" />
+        <path fill={CREAM} d="M85 49C89 32 88 16 76 11C69 8 61 13 54 23L68 39Z" />
+        <path fill={EAR} d="M81 43C84 30 82 19 75 15C69 12 63 17 58 25L71 38Z" />
+      </g>
 
       {/* Head with fluffy cheeks */}
       <path
