@@ -10,7 +10,8 @@ The build copies `index.html` to `404.html` so deep links like `/people` survive
 - Name: "Ailurus" in running text; the logo styles it **AIlurus** (`src/components/ui/wordmark.tsx`).
 - Mascot: the red panda face, `public/ailurus-mascot.svg`. `src/components/ui/red-panda.tsx`
   is the same artwork inline (so it can blink) - keep the two in step.
-  `favicon.ico`, `logo-192x192.png`, `logo-512x512.png` are rasterized from the SVG.
+  `favicon.ico`, `logo-192x192.png`, `logo-512x512.png`, `ailurus-mascot-1024.png` (transparent),
+  and `ailurus-icon-1024.png` (on a leaf background, for avatars) are rasterized from the SVG.
 - Look: a bamboo forest, deliberately unlike the Marble Labs site. Cream paper background,
   serif headings (Fraunces) over Nunito Sans, rounded organic shapes, hills between sections.
 - Colors are Tailwind tokens in `src/index.css`: `paper` #FAF5EC, `leaf` #EAF0DC, `bamboo` #8DB255,
